@@ -9037,3 +9037,175 @@ WARNING: Unmatched cancel notification for request id 2839
 2023.03.15 23:15:08 INFO  Shut down connection with build server.
 2023.03.15 23:15:08 INFO  Shut down connection with build server.
 2023.03.15 23:15:08 INFO  Exiting server
+2023.03.15 23:15:22 INFO  Started: Metals version 0.11.11 in workspace 'C:\Users\conor\Documents\Projects\hello-world' for client Visual Studio Code 1.76.2.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/C:/Users/conor/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.15 23:15:22 INFO  time: initialize in 0.41s
+2023.03.15 23:15:22 INFO  Attempting to connect to the build server...
+2023.03.15 23:15:22 INFO  Bloop uses C:\Program Files\Java\jdk-17.0.5 defined at C:\Users\conor\.bloop\bloop.json
+2023.03.15 23:15:23 INFO  skipping build import with status 'Installed'
+2023.03.15 23:15:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\conor\Documents\Projects\hello-world\.metals\bsp.trace.json or C:\Users\conor\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.03.15 23:15:23 INFO  Attempting to connect to the build server...
+2023.03.15 23:15:23 INFO  Bloop uses C:\Program Files\Java\jdk-17.0.5 defined at C:\Users\conor\.bloop\bloop.json
+2023.03.15 23:15:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\conor\Documents\Projects\hello-world\project\.metals\bsp.trace.json or C:\Users\conor\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.03.15 23:15:23 INFO  time: Connected to build server in 0.18s
+2023.03.15 23:15:23 INFO  Connected to Build server: Bloop v1.5.6
+2023.03.15 23:15:25 INFO  no build target found for C:\Users\conor\Documents\Projects\hello-world\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.15 23:15:25 INFO  time: code lens generation in 2.14s
+2023.03.15 23:15:30 INFO  time: indexed workspace in 5.25s
+2023.03.15 23:15:30 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:15:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:15:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:15:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+Mar 15, 2023 11:15:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "build/taskFinish",
+  "params": {
+    "taskId": {
+      "id": "1"
+    },
+    "eventTime": 1678918530882,
+    "message": "Compiled \u0027hello-world\u0027",
+    "status": 2,
+    "dataKind": "compile-report",
+    "data": {
+      "target": {
+        "uri": "file:/C:/Users/conor/Documents/Projects/hello-world/?id\u003dhello-world"
+      },
+      "errors": 2,
+      "warnings": 0,
+      "isNoOp": false,
+      "isLastCycle": true
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.NullPointerException: Cannot invoke "scala.meta.pc.PresentationCompiler.restart()" because "x$9" is null
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$1(Compilers.scala:246)
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$1$adapted(Compilers.scala:246)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.Compilers.didCompile(Compilers.scala:246)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$buildClient$1(MetalsLspService.scala:407)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$buildClient$1$adapted(MetalsLspService.scala:405)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$2(ForwardingMetalsBuildClient.scala:165)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1(ForwardingMetalsBuildClient.scala:162)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1$adapted(ForwardingMetalsBuildClient.scala:161)
+	at scala.Option.foreach(Option.scala:437)
+	at scala.meta.internal.metals.clients.language.ForwardingMetalsBuildClient.buildTaskFinish(ForwardingMetalsBuildClient.scala:161)
+	... 16 more
+
+2023.03.15 23:15:31 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:15:31 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+2023.03.15 23:15:51 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:15:51 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:15:51 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:15:51 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+2023.03.15 23:15:51 INFO  time: compiled hello-world in 37ms
+2023.03.15 23:16:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:16:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+2023.03.15 23:16:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:16:30 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+2023.03.15 23:16:31 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:16:31 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+2023.03.15 23:16:31 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:31: stale bloop error: invalid string interpolation $(, expected: $$, $", $identifier or ${expression}
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                              ^
+2023.03.15 23:16:31 INFO  file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main.scala:55:72: stale bloop error: unclosed string literal
+    totalPointsLabel.text = s"Total Spell Points: $(totalPoints - cost)"
+                                                                       ^
+2023.03.15 23:16:33 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:16:33 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:16:33 INFO  time: compiled hello-world in 0.63s
+2023.03.15 23:18:50 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:18:50 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:18:50 INFO  time: compiled hello-world in 0.48s
+2023.03.15 23:24:49 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:24:49 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:24:49 INFO  time: compiled hello-world in 0.48s
+Mar 15, 2023 11:27:33 PM scala.meta.internal.pc.CompletionProvider expected$1
+WARNING: offset 2211, count -1, length 3294
+2023.03.15 23:28:42 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:28:42 INFO  time: compiled hello-world in 0.14s
+2023.03.15 23:28:58 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:28:58 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:28:58 INFO  time: compiled hello-world in 0.51s
+2023.03.15 23:32:16 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:32:16 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:32:16 INFO  time: compiled hello-world in 0.48s
+2023.03.15 23:32:35 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:32:35 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:32:35 INFO  time: compiled hello-world in 0.72s
+2023.03.15 23:33:48 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:33:48 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:33:48 INFO  time: compiled hello-world in 0.48s
+2023.03.15 23:34:41 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:34:41 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:34:41 INFO  time: compiled hello-world in 0.48s
+2023.03.15 23:35:47 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:35:47 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:35:47 INFO  time: compiled hello-world in 0.47s
+2023.03.15 23:38:05 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:38:05 INFO  time: compiled hello-world in 0.13s
+2023.03.15 23:38:31 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:38:31 INFO  time: compiled hello-world in 0.15s
+2023.03.15 23:38:44 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:38:44 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:38:44 INFO  time: compiled hello-world in 0.49s
+2023.03.15 23:41:00 INFO  compiling hello-world (1 scala source)
+2023.03.15 23:41:00 WARN  1 deprecation (since 16.0.0-R23); re-run with -deprecation for details
+2023.03.15 23:41:00 INFO  time: compiled hello-world in 0.48s
+Mar 15, 2023 11:41:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
