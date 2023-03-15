@@ -2,20 +2,20 @@
     "version": "1.4.0",
     "project": {
         "name": "hello-world-test",
-        "directory": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world",
-        "workspaceDir": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world",
+        "directory": "C:\\Users\\conor\\Documents\\Projects\\hello-world",
+        "workspaceDir": "C:\\Users\\conor\\Documents\\Projects\\hello-world",
         "sources": [
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\src\\test\\scala",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\src\\test\\scala-2.13",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\src\\test\\scala-2",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\src\\test\\java",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\target\\scala-2.13\\src_managed\\test"
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\test\\scala",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\test\\scala-2.13",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\test\\scala-2",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\test\\java",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\target\\scala-2.13\\src_managed\\test"
         ],
         "dependencies": [
             "hello-world"
         ],
         "classpath": [
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\.bloop\\hello-world\\scala-2.13\\classes",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\.bloop\\hello-world\\scala-2.13\\classes",
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.8\\scala-library-2.13.8.jar",
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-parser-combinators_2.13\\2.1.1\\scala-parser-combinators_2.13-2.1.1.jar",
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalafx\\scalafx_2.13\\18.0.1-R28\\scalafx_2.13-18.0.1-R28.jar",
@@ -35,11 +35,11 @@
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\openjfx\\javafx-swing\\18.0.1\\javafx-swing-18.0.1-win.jar",
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\openjfx\\javafx-web\\18.0.1\\javafx-web-18.0.1-win.jar"
         ],
-        "out": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\.bloop\\hello-world",
-        "classesDir": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\.bloop\\hello-world\\scala-2.13\\test-classes",
+        "out": "C:\\Users\\conor\\Documents\\Projects\\hello-world\\.bloop\\hello-world",
+        "classesDir": "C:\\Users\\conor\\Documents\\Projects\\hello-world\\.bloop\\hello-world\\scala-2.13\\test-classes",
         "resources": [
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\src\\test\\resources",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\target\\scala-2.13\\resource_managed\\test"
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\test\\resources",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\target\\scala-2.13\\resource_managed\\test"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -121,9 +121,9 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Users\\conor\\.jabba\\jdk\\adopt@1.11.0-11",
+                "home": "C:\\Program Files\\Java\\jdk-17.0.5",
                 "options": [
-                    "-Duser.dir=C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world"
+                    "-Duser.dir=C:\\Users\\conor\\Documents\\Projects\\hello-world"
                 ]
             },
             "mainClass": [

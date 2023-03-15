@@ -2,15 +2,15 @@
     "version": "1.4.0",
     "project": {
         "name": "hello-world-build",
-        "directory": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project",
-        "workspaceDir": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project",
+        "directory": "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project",
+        "workspaceDir": "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project",
         "sources": [
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\src\\main\\scala",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\src\\main\\scala-2.12",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\src\\main\\scala-2",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\src\\main\\java",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\src\\main\\scala-sbt-1.0",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\target\\scala-2.12\\sbt-1.0\\src_managed\\main"
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\src\\main\\scala",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\src\\main\\scala-2.12",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\src\\main\\scala-2",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\src\\main\\java",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\src\\main\\scala-sbt-1.0",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\target\\scala-2.12\\sbt-1.0\\src_managed\\main"
         ],
         "dependencies": [
             
@@ -103,11 +103,11 @@
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\reactivestreams\\reactive-streams\\1.0.3\\reactive-streams-1.0.3.jar",
             "C:\\Users\\conor\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\config\\1.4.2\\config-1.4.2.jar"
         ],
-        "out": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\.bloop\\hello-world-build",
-        "classesDir": "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\.bloop\\hello-world-build\\scala-2.12\\sbt-1.0\\classes",
+        "out": "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\.bloop\\hello-world-build",
+        "classesDir": "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\.bloop\\hello-world-build\\scala-2.12\\sbt-1.0\\classes",
         "resources": [
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\src\\main\\resources",
-            "C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project\\target\\scala-2.12\\sbt-1.0\\resource_managed\\main"
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\src\\main\\resources",
+            "C:\\Users\\conor\\Documents\\Projects\\hello-world\\project\\target\\scala-2.12\\sbt-1.0\\resource_managed\\main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -202,9 +202,9 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Program Files\\Java\\jdk-19",
+                "home": "C:\\Program Files\\Java\\jdk-17.0.5",
                 "options": [
-                    "-Duser.dir=C:\\Users\\conor\\Documents\\Projects\\spellPoints\\hello-world\\project"
+                    "-Duser.dir=C:\\Users\\conor\\Documents\\Projects\\hello-world\\project"
                 ]
             },
             "mainClass": [

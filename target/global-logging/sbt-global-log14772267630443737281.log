@@ -1,0 +1,38 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(;Test/compile; collectAnalyses, None, Some(CommandSource(network-1)))[0m
+[0m[[0m[0mdebug[0m] [0m[0munmatched Processing event for requestId None: None[0m
+[0m[[0m[0mdebug[0m] [0m[0munmatched Done event for requestId None: None[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Test/compile, None, Some(CommandSource(network-1)))[0m
+[0m[[0m[0mdebug[0m] [0m[0munmatched Processing event for requestId None: None[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"13","parents":[]},"eventTime":1678905195412,"message":"Compiling hello-world","dataKind":"compile-task","data":{"target":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"}}})[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to C:\Users\conor\Documents\Projects\hello-world\target\scala-2.13\classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"compiling 1 Scala source to C:\\Users\\conor\\Documents\\Projects\\hello-world\\target\\scala-2.13\\classes ..."})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main2.scala"},"buildTarget":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"},"diagnostics":[{"range":{"start":{"line":21,"character":41},"end":{"line":25,"character":16}},"severity":1,"source":"sbt","message":"value delegate is not a member of Unit\npossible cause: maybe a semicolon is missing before `value delegate`?"}],"reset":false})[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\conor\Documents\Projects\hello-world\src\main\scala\Main2.scala:26:9: value delegate is not a member of Unit[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value delegate`?[0m
+[0m[[0m[31merror[0m] [0m[0m      }.delegate[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\main\\scala\\Main2.scala:26:9: value delegate is not a member of Unit\npossible cause: maybe a semicolon is missing before `value delegate`?"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"      }.delegate"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"        ^"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main2.scala"},"buildTarget":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"},"diagnostics":[{"range":{"start":{"line":32,"character":41},"end":{"line":36,"character":16}},"severity":1,"source":"sbt","message":"value delegate is not a member of Unit\npossible cause: maybe a semicolon is missing before `value delegate`?"}],"reset":false})[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\conor\Documents\Projects\hello-world\src\main\scala\Main2.scala:37:9: value delegate is not a member of Unit[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value delegate`?[0m
+[0m[[0m[31merror[0m] [0m[0m      }.delegate[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"C:\\Users\\conor\\Documents\\Projects\\hello-world\\src\\main\\scala\\Main2.scala:37:9: value delegate is not a member of Unit\npossible cause: maybe a semicolon is missing before `value delegate`?"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"      }.delegate"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"        ^"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"13","parents":[]},"eventTime":1678905195631,"message":"Compiling hello-world (15%)","total":26,"progress":15,"dataKind":"compile-progress","data":{"target":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"}}})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"13","parents":[]},"eventTime":1678905195632,"message":"Compiling hello-world (15%)","total":26,"progress":15,"dataKind":"compile-progress","data":{"target":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"}}})[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"two errors found"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///C:/Users/conor/Documents/Projects/hello-world/src/main/scala/Main2.scala"},"buildTarget":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"},"diagnostics":[{"range":{"start":{"line":21,"character":41},"end":{"line":25,"character":16}},"severity":1,"source":"sbt","message":"value delegate is not a member of Unit\npossible cause: maybe a semicolon is missing before `value delegate`?"},{"range":{"start":{"line":32,"character":41},"end":{"line":36,"character":16}},"severity":1,"source":"sbt","message":"value delegate is not a member of Unit\npossible cause: maybe a semicolon is missing before `value delegate`?"}],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"13","parents":[]},"eventTime":1678905195633,"message":"Compiled hello-world","status":2,"dataKind":"compile-report","data":{"target":{"uri":"file:/C:/Users/conor/Documents/Projects/hello-world/#hello-world/Compile"},"errors":2,"warnings":0,"time":221}})[0m
+[0m[[0m[0mdebug[0m] [0m[0munmatched json error for requestId None: {"code":-32603,"message":"(Compile / \u001b[31mcompileIncremental\u001b[0m) Compilation failed"}[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"(Compile / \u001b[31mcompileIncremental\u001b[0m) Compilation failed"})[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed 15 Mar 2023, 19:33:15[0m
+[0m[[0m[0mdebug[0m] [0m[0munmatched Done event for requestId None: None[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

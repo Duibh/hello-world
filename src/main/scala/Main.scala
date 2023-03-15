@@ -1,196 +1,99 @@
-import scalafx.scene.control.{ComboBox, SpinnerValueFactory}
 import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
-import scalafx.scene.Scene
-import scalafx.scene.control._
-import scalafx.scene.layout._
 import scalafx.geometry.Insets
+import scalafx.scene.Scene
+import scalafx.scene.control.{Button, ComboBox, Label}
+import scalafx.scene.layout.{HBox, VBox}
+import scalafx.event.ActionEvent
+import scalafx.scene.layout.GridPane
 
-object SpellPointTracker extends JFXApp {
-
-  // Maps the spell level to the total number of spell points available at that level
-  val spellPointTotal: Map[Int, Int] = Map(
-    1 -> 4,
-    2 -> 6,
-    3 -> 14,
-    4 -> 17,
-    5 -> 27,
-    6 -> 32,
-    7 -> 38,
-    8 -> 44,
-    9 -> 57,
-    10 -> 64, 
-    11 -> 73,
-    12 -> 73,
-    13 -> 83,
-    14 -> 83,
-    15 -> 94,
-    16 -> 94,
-    17 -> 107,
-    18 -> 114,
-    19 -> 123,
-    20 -> 133
+object SpellPointCalculator extends JFXApp {
+  val spellPointsMap = Map(
+    1 -> 4, 2 -> 6, 3 -> 14, 4 -> 17, 5 -> 27,
+    6 -> 32, 7 -> 38, 8 -> 44, 9 -> 57, 10 -> 64,
+    11 -> 73, 12 -> 73, 13 -> 83, 14 -> 83, 15 -> 94,
+    16 -> 94, 17 -> 107, 18 -> 114, 19 -> 123, 20 -> 133
   )
 
-   // Maps the spell level to the cost of casting a spell at that level in spell points
-  val spellCostPerLevel: Map[Int, Int] = Map(
-    1 -> 2,
-    2 -> 3,
-    3 -> 5,
-    4 -> 6,
-    5 -> 7,
-    6 -> 9,
-    7 -> 10,
-    8 -> 11,
-    9 -> 13
+  val spellCostMap = Map(
+    "0" -> 0, "1" -> 2, "2" -> 3, "3" -> 5, "4" -> 6, "5" -> 7,
+    "6" -> 9, "7" -> 10, "8" -> 11, "9" -> 13
   )
 
-  // Keeps track of the number of spell points spent at each spell level
-  var spellPoints: Map[Int, Int] = Map.empty
+  // Set up caster level combo box with appropriate values and labels
+  val casterLevelComboBox = new ComboBox(1 to 20 map { level =>
+    s"Level $level (Spell Points ${spellPointsMap(level)})"
+  })
+  val initialLevel = 1
 
-   // Sets the caster level and initializes the spellPoints map with zeros for each spell level
-  def setCasterLevel(level: Int, spellCostPerLevel: Map[Int, Int], spellPointTotal: Map[Int, Int]): Unit = {
-    spellPoints = spellPointTotal.map { case (k, _) => k -> 0 }
-    totalPointsLabel.text = s"Total spell points: ${spellPointTotal(level)}"
+  casterLevelComboBox.value = casterLevelComboBox.items().find(item => item.startsWith(s"Level $initialLevel")).get
 
-    // Sets the maximum value and listener for each spinner
-    spellLevelSpinners.foreach(spinner => {
-      val level = spinner.userData.asInstanceOf[Int]
-      val spellLevel = spellCostPerLevel(level)
+  // Set up total points label
+  var totalPoints = spellPointsMap(initialLevel)
+  val totalPointsLabel = new Label(s"Total Spell Points: $totalPoints")
 
-      val valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, spellPointTotal(level), 0)
-      valueFactory.setWrapAround(true)
-      valueFactory.valueProperty().addListener((_, _, newValue) => {
-        val level = spinner.userData.asInstanceOf[Int]
-        spellPoints += (level -> newValue)
-        totalPointsLabel.text = s"Total spell points: ${spellPoints.values.sum}"
-        spellLevelSpinners.foreach(otherSpinner => {
-          if (otherSpinner != spinner) {
-            val otherValueFactory = otherSpinner.getValueFactory.asInstanceOf[SpinnerValueFactory.IntegerSpinnerValueFactory]
-            otherValueFactory.setMax((spellPointTotal(level) - spellPoints.values.sum) / spellCostPerLevel(otherSpinner.userData.asInstanceOf[Int]))
-          }
-        })
-      })
-      spinner.valueFactory = valueFactory.asInstanceOf[SpinnerValueFactory[Int]]
-    })
+  // Add listener to caster level combo box to update total points
+  casterLevelComboBox.onAction = () => {
+    val newLevel = casterLevelComboBox.value().split(" ")(1).toInt
+    val newPoints = spellPointsMap(newLevel)
+    totalPoints = newPoints
+    totalPointsLabel.text = s"Total Spell Points: $totalPoints"
   }
+  
+  val spellLevelComboBox = new ComboBox(List("1", "2", "3", "4", "5", "6", "7", "8", "9") map { level =>
+    s"Spell Level $level (Cost ${spellCostMap(level)})"
+  })
 
-  /*def setCasterLevel(level: Int): Unit = {
-    println(s"Setting caster level to $level")
-    spellPoints = spellPointTotal.map { case (k, _) => k -> 0 }
-    totalPointsLabel.text = s"Total spell points: ${spellPointTotal(level)}"
+  // Set up add and subtract buttons with appropriate listeners
+  val addButton = new Button("Add")
+  val subtractButton = new Button("Subtract")
 
-    // Set the maximum value for each spinner
-    spellLevelSpinners.foreach(spinner => {
-      val level = spinner.userData.asInstanceOf[Int]
-      val spellLevel = spellCostPerLevel(level)
-
-      val valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, spellPointTotal(casterLevelComboBox.getValue), 0)
-      valueFactory.setWrapAround(true)
-      valueFactory.valueProperty().addListener((_, _, newValue) => {
-        println(s"Spinner value changed to $newValue")
-        val level = spinner.userData.asInstanceOf[Int]
-        spellPoints += (level -> newValue)
-        totalPointsLabel.text = s"Total spell points: ${spellPoints.values.sum}"
-        spellLevelSpinners.foreach(otherSpinner => {
-          if (otherSpinner != spinner) {
-            val otherValueFactory = otherSpinner.getValueFactory.asInstanceOf[SpinnerValueFactory.IntegerSpinnerValueFactory]
-            otherValueFactory.setMax((spellPointTotal(casterLevelComboBox.getValue) - spellPoints.values.sum) / spellCostPerLevel(otherSpinner.userData.asInstanceOf[Int]))
-          }
-        })
-      })
-      spinner.valueFactory = valueFactory.asInstanceOf[SpinnerValueFactory[Int]]
-
-      /*val valueFactory = spinner.valueFactory.value.asInstanceOf[SpinnerValueFactory.IntegerSpinnerValueFactory]
-      valueFactory.setWrapAround(true)
-      valueFactory.setValue(0)
-      valueFactory.setMin(0)
-      valueFactory.setMax(spellPointTotal(level) / spellLevel)
-      spinner.setValueFactory(valueFactory)*/
-    })
+  /*spellLevelComboBox.onAction = () => {
+    val cost = spellCostMap(spellLevelComboBox.value())
+    totalPointsLabel.text = s"Total Spell Points: ${totalPoints - cost}"
   }*/
-
-  val spellLevelSpinners: Seq[Spinner[Int]] = spellCostPerLevel.keys.toSeq.sorted.map(level => {
-    val spinner = new Spinner[Int](0, spellPointTotal(casterLevelComboBox.getValue) / spellCostPerLevel(level), 0)
-    spinner.userData = level.asInstanceOf[AnyRef]
-    spinner.value.onChange((_, _, newValue) => {
-      val spellLevel = spinner.userData.asInstanceOf[Int]
-      spellPoints += (spellLevel -> (newValue * spellCostPerLevel(spellLevel)))
-      totalPointsLabel.text = s"Total spell points: ${spellPoints.values.sum}"
-    })
-    spinner
-  })
-
-  val casterLevelComboBox = new ComboBox[Int](1 to 20)
-  casterLevelComboBox.selectionModel().selectFirst()
-  casterLevelComboBox.value.onChange((_, _, newValue) => {
-    setCasterLevel(newValue, spellCostPerLevel, spellPointTotal)
-  })
-  /*casterLevelComboBox.value.onChange((_, _, newValue) => {
-    setCasterLevel(newValue)
-  })*/
-
-
-  /*def setCasterLevel(level: Int): Unit = {
-    spellPoints = spellPointTotal.map { case (k, _) => k -> 0 }
-    totalPointsLabel.text = s"Total spell points: ${spellPointTotal(level)}"
-    
-    // Set the maximum value for each spinner
-    spellLevelSpinners.foreach(spinner => {
-      val valueFactory = spinner.valueFactory.value
-      
-      valueFactory.setWrapAround(true)
-      valueFactory.setValue(0)
-      //valueFactory.maxValueProperty().setValue(Integer.valueOf(spellPointTotal(level)))
-
-      spinner.setValueFactory(valueFactory)
-      //spinner.getValueFactory.setValue(valueFactory) // Update the spinner value if necessary
-    })
+  
+  addButton.onAction = () => {
+    val costString = "Cost Y".r
+    val cost = (costString findFirstIn spellLevelComboBox.value()).get.replaceAll("[^0-9]", "").toInt //try this again
+    //val cost = spellCostMap(spellLevelComboBox.value().split(" ")(2).dropRight(1))
+    //val cost = spellCostMap(spellLevelComboBox.value().drop("Spell Level ".length))
+    totalPoints += cost
+    totalPointsLabel.text = s"Total Spell Points: $totalPoints"
   }
 
-  val casterLevelComboBox = new ComboBox[Int](1 to 20)
-  casterLevelComboBox.selectionModel().selectFirst()
-  casterLevelComboBox.value.onChange((_, _, newValue) => {
-    setCasterLevel(newValue)
-  })
-
-  val spellLevelSpinners: Seq[Spinner[Int]] = spellPointTotal.keys.toSeq.sorted.map(level => {
-    val spinner = new Spinner[Int](0, spellPointTotal(casterLevelComboBox.getValue), 0)
-    spinner.userData = level.asInstanceOf[AnyRef]
-    spinner.value.onChange((_, _, newValue) => {
-      spellPoints += (level -> newValue)
-      totalPointsLabel.text = s"Total spell points: ${spellPoints.values.sum}"
-    })
-    spinner
-  })*/
-
-  val totalPointsLabel = new Label(s"Total spell points: ${spellPointTotal.values.sum}")
-
-  val spellLevelLabels: Seq[Label] = spellCostPerLevel.keys.toSeq.sorted.map(level =>
-    new Label(s"Level $level (${spellCostPerLevel(level)} points)")
-  )
-
-  val gridPane = new GridPane {
+  subtractButton.onAction = () => {
+    val costString = "Cost Y".r
+    val cost = (costString findFirstIn spellLevelComboBox.value()).get.replaceAll("[^0-9]", "").toInt //try this again
+    //val cost = spellCostMap(spellLevelComboBox.value().split(" ")(2).dropRight(1))
+    //val cost = spellCostMap(spellLevelComboBox.value().drop("Spell Level ".length))
+    totalPoints -= cost
+    totalPointsLabel.text = s"Total Spell Points: $totalPoints"
+  }
+  
+  // Set up spell points grid pane with appropriate components
+  val spellPointsGridPane = new GridPane {
     hgap = 10
     vgap = 10
     padding = Insets(10)
-    add(new Label("Caster level:"), 0, 0)
+    add(new Label("Caster Level:"), 0, 0)
     add(casterLevelComboBox, 1, 0)
-    spellLevelLabels.zipWithIndex.foreach { case (label, index) =>
-      add(label, 0, index + 1)
-      add(spellLevelSpinners(index), 1, index + 1)
-    }
-    add(totalPointsLabel, 0, spellLevelLabels.size + 1, 2, 1)
+    add(totalPointsLabel, 2, 0)
+    add(new Label("Spell Level:"), 0, 1)
+    add(spellLevelComboBox, 1, 1)
+    add(addButton, 2, 1)
+    add(subtractButton, 3, 1)
   }
 
+  val vbox = new VBox {
+    children = spellPointsGridPane
+    padding = Insets(10)
+  }
   stage = new PrimaryStage {
-    title = "Spell Point Tracker"
+    title = "Spell Point Calculator"
     scene = new Scene {
-      root = new BorderPane {
-        center = gridPane
-      }
+      content = vbox
     }
   }
-
 }

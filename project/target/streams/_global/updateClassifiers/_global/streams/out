@@ -1,3 +1,4 @@
-[debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/C:/Users/conor/Documents/Projects/spellPoints/hello-world/project/"), "hello-world-build")...
-[debug] Done updating ProjectRef(uri("file:/C:/Users/conor/Documents/Projects/spellPoints/hello-world/project/"), "hello-world-build")
+[warn] sbt-bloop-1.5.6-sources.jar no longer exists at C:\Users\conor\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\ch\epfl\scala\sbt-bloop_2.12_1.0\1.5.6\sbt-bloop-1.5.6-sources.jar
+[debug] not up to date. inChanged = false, force = false
+[debug] Updating ProjectRef(uri("file:/C:/Users/conor/Documents/Projects/hello-world/project/"), "hello-world-build")...
+[debug] Done updating ProjectRef(uri("file:/C:/Users/conor/Documents/Projects/hello-world/project/"), "hello-world-build")
