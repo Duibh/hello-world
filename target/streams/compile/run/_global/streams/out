@@ -1,0 +1,33 @@
+[0m[[0m[31merror[0m] [0m[0mjava.lang.RuntimeException: Exception in Application start method[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:901)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:1589)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.control.ComboBox.getValue()" because the return value of "scalafx.scene.control.ComboBox$.sfxComboBox2jfx(scalafx.scene.control.ComboBox)" is null[0m
+[0m[[0m[31merror[0m] [0m[0m	at SpellPointTracker$.$anonfun$spellLevelSpinners$1(Main.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SpellPointTracker$.$anonfun$spellLevelSpinners$1$adapted(Main.scala:110)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.map(List.scala:246)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.map(List.scala:79)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SpellPointTracker$.delayedEndpoint$SpellPointTracker$1(Main.scala:110)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SpellPointTracker$delayedInit$body.apply(Main.scala:10)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp(Function0.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp$(Function0.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scalafx.application.JFXApp.$anonfun$init$1(JFXApp.scala:309)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scalafx.application.JFXApp.$anonfun$init$1$adapted(JFXApp.scala:309)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:563)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:561)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.AbstractIterable.foreach(Iterable.scala:926)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scalafx.application.JFXApp.init(JFXApp.scala:309)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scalafx.application.JFXApp.init$(JFXApp.scala:309)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SpellPointTracker$.init(Main.scala:10)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scalafx.application.AppHelper.start(AppHelper.scala:37)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:456)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:1589)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) Exception in Application start method[0m

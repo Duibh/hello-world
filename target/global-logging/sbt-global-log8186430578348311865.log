@@ -1,0 +1,41 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(7516e52a-d102-474a-89c3-0f4bc8f6b8a7), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to C:\Users\conor\Documents\Projects\spellPoints\hello-world\target\scala-2.13\classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 16.0.0-R23); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mjava.lang.RuntimeException: java.lang.UnsatisfiedLinkError: no glass in java.library.path: C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk-19\bin;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\sbt\bin;C:\Users\conor\AppData\Local\Microsoft\WindowsApps;C:\Users\conor\AppData\Local\Programs\Microsoft VS Code\bin;.[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.tk.quantum.QuantumToolkit.startup(QuantumToolkit.java:300)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:293)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:163)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.startToolkit(LauncherImpl.java:659)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:679)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:1589)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.UnsatisfiedLinkError: no glass in java.library.path: C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk-19\bin;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\sbt\bin;C:\Users\conor\AppData\Local\Microsoft\WindowsApps;C:\Users\conor\AppData\Local\Programs\Microsoft VS Code\bin;.[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2444)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:848)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.System.loadLibrary(System.java:2047)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.utils.NativeLibLoader.loadLibraryInternal(NativeLibLoader.java:166)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.utils.NativeLibLoader.loadLibrary(NativeLibLoader.java:54)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.Application.loadNativeLibrary(Application.java:112)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.Application.loadNativeLibrary(Application.java:120)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinApplication.access$000(WinApplication.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinApplication$1.run(WinApplication.java:107)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinApplication$1.run(WinApplication.java:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinApplication.<clinit>(WinApplication.java:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinPlatformFactory.createApplication(WinPlatformFactory.java:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.win.WinPlatformFactory.createApplication(WinPlatformFactory.java:36)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.glass.ui.Application.run(Application.java:146)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.tk.quantum.QuantumToolkit.startup(QuantumToolkit.java:290)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:293)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:163)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.startToolkit(LauncherImpl.java:659)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:679)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:1589)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) java.lang.UnsatisfiedLinkError: no glass in java.library.path: C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk-19\bin;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\sbt\bin;C:\Users\conor\AppData\Local\Microsoft\WindowsApps;C:\Users\conor\AppData\Local\Programs\Microsoft VS Code\bin;.[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 12 s, completed 15 Mar 2023, 14:21:21[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
